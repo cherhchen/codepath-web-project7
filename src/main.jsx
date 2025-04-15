@@ -6,6 +6,7 @@ import App from './App.jsx'
 import Sidebar from './routes/Sidebar.jsx'
 import CreateCrewmate from './routes/CreateCrewmate.jsx'
 import Gallery from './routes/Gallery.jsx'
+import EditCrewmate from './routes/EditCrewmate.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

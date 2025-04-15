@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../client";
-import { Crewmate } from "../component/Crewmate"
+import Crewmate from "../component/Crewmate"
 
 const Gallery = () => {
     const [crewmates, setCrewmates] = useState([]);
@@ -22,10 +22,10 @@ const Gallery = () => {
 
     return (
         <div className="gallery-container">
-            <h1>gallery</h1>
-            {crewmates.map((crewmate) => {
+            <h1>Crewmate Gallery</h1>
+            {crewmates.map((crewmate) =>
                 <Crewmate crewmate={crewmate} />
-            })}
+            )}
         </div>
     );
 }
