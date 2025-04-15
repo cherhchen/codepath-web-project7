@@ -11,12 +11,12 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/" className="link">
+            <Link to="/create" className="link">
               Create a Crewmate
             </Link>
           </li>
           <li>
-            <Link to="/" className="link">
+            <Link to="/gallery" className="link">
               Crewmate Gallery
             </Link>
           </li>

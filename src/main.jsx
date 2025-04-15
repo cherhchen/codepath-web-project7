@@ -15,6 +15,7 @@ createRoot(document.getElementById('root')).render(
           <Route index={true} element={<App/>}/>
           <Route index={false} path="/create" element={<CreateCrewmate/>}/>
           <Route index={false} path="/gallery" element={<Gallery/>}/>
+          <Route index={false} path="/:id/edit" element={<EditCrewmate/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

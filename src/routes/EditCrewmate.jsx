@@ -1,12 +1,9 @@
-import { useState } from "react";
-import { supabase } from "../client";
-
-const CreateCrewmate = () => {
+const EditCrewmate = () => {
     const [formData, setFormData] = useState({
         name: "",
         speed: "",
         color: ""
-    });
+     });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -25,8 +22,8 @@ const CreateCrewmate = () => {
     };
 
     return (
-        <div className="create-container">
-            <h1>Create Crewmate</h1>
+        <div className="edit-container">
+            <h1>Update Your Crewmate</h1>
             <form onSubmit={handleSubmit}>
                 <label>
                     Name:
@@ -65,6 +62,6 @@ const CreateCrewmate = () => {
             </form>
         </div>
     );
-};
+}
 
-export default CreateCrewmate;
+export default EditCrewmate;
