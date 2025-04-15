@@ -24,7 +24,7 @@ const Gallery = () => {
         <div className="gallery-container">
             <h1>Crewmate Gallery</h1>
             {crewmates.map((crewmate) =>
-                <Crewmate crewmate={crewmate} />
+                <Crewmate key={crewmate.id} crewmate={crewmate} />
             )}
         </div>
     );

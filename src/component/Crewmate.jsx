@@ -7,7 +7,7 @@ const Crewmate = ({ crewmate }) => {
             <p>Name: {crewmate.name} </p>
             <p>Speed: {crewmate.speed}</p>
             <p>Color: {crewmate.color}</p>
-            <Link to={`${crewmate.id}/edit`}>
+            <Link to={`../${crewmate.id}/edit`}>
                 <button>Edit Crewmate</button>
             </Link>
 

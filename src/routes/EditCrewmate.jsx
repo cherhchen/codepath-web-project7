@@ -32,7 +32,7 @@ const EditCrewmate = () => {
     useEffect(() => {
         const fetchCrewmate = async () => {
             const { data, error } = await supabase
-                .from('Crewmate')
+                .from('Crewmates')
                 .select('*') // Or specify columns: 'column1, column2, ...'
                 .eq('id', id) // Replace 'id' with your primary key column name
                 .single(); // Use .single() if you expect only one result
