@@ -1,8 +1,10 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* max-width: 1280px; */
+  /* margin: 0 auto;
+  padding: 2rem; */
+  width: 100%;
   text-align: center;
+  background-color: black;
 }
 
 .logo {
@@ -33,10 +35,39 @@
   }
 }
 
-.card {
-  padding: 2em;
+.container {
+  display: flex;
+  width: 100%;
 }
 
-.read-the-docs {
-  color: #888;
+.sidebar {
+  min-width: 300px;
+  min-height: 100vh;
+  margin-right: 3rem;
+  background-color: gray;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.link {
+  color: white;
+}
+
+.link:hover {
+  color: beige;
+}
+
+.home-container {
+  width: 100%;
+  text-align: center;
+  color: white;
 }
