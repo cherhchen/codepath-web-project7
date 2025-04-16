@@ -18,7 +18,7 @@ const EditCrewmate = () => {
         });
     };
 
-    const handleSubmit = async (e) => {
+    const handleUpdate = async (e) => {
         e.preventDefault();
         // Add logic to save the form data to Supabase or handle it as needed
         console.log(formData);
@@ -27,7 +27,19 @@ const EditCrewmate = () => {
             .update(formData)
             .eq("id", formData.id);
         console.log(data, error);
+        alert("Crewmate updated!");
     };
+
+    const handleDelete = async (e) => {
+        e.preventDefault();
+        const { data, error } = await supabase
+            .from("Crewmates")
+            .delete()
+            .eq("id", id);
+        console.log(data, error);
+        alert("Crewmate deleted!");
+        window.location = "http://localhost:5173/gallery";
+    }
 
     useEffect(() => {
         const fetchCrewmate = async () => {
@@ -45,7 +57,6 @@ const EditCrewmate = () => {
             } else {
                 console.log('No data found with that ID.');
             }
-
         }
 
         fetchCrewmate();
@@ -55,7 +66,7 @@ const EditCrewmate = () => {
     return (
         <div className="edit-container">
             <h1>Update Your Crewmate</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleUpdate}>
                 <label>
                     Name:
                     <input
@@ -78,7 +89,7 @@ const EditCrewmate = () => {
                     />
                 </label>
                 <br />
-                <label>
+                {/* <label>
                     Color:
                     <input
                         type="text"
@@ -87,9 +98,25 @@ const EditCrewmate = () => {
                         onChange={handleChange}
                         required
                     />
+                </label> */}
+                <label>
+                    Color:
+                    <select id="color" name="color" value={formData.color} onChange={handleChange}>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="purple">Purple</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="orange">Orange</option>
+                        <option value="pink">Pink</option>
+                        <option value="rainbow">Rainbow</option>
+                    </select>
                 </label>
                 <br />
-                <button type="submit">Submit</button>
+                <div className="button-group">
+                    <button onClick={handleUpdate}>Update Crewmate</button>
+                    <button onClick={handleDelete}>Delete Crewmate</button>
+                </div>
             </form>
         </div>
     );

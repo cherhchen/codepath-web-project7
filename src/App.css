@@ -89,3 +89,14 @@
   text-align: center;
   color: white;
 }
+
+.crewmate-card {
+  padding-bottom: 1rem;
+  border: 1px solid gray;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}

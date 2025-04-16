@@ -22,6 +22,8 @@ const CreateCrewmate = () => {
         console.log(formData);
         const { data, error } = await supabase.from("Crewmates").insert(formData);
         console.log(data, error);
+        setFormData({"name": "", "speed": "", "color": ""});
+        alert("Crewmated created!")
     };
 
     return (
@@ -52,16 +54,19 @@ const CreateCrewmate = () => {
                 <br />
                 <label>
                     Color:
-                    <input
-                        type="text"
-                        name="color"
-                        value={formData.color}
-                        onChange={handleChange}
-                        required
-                    />
+                    <select id="color" name="color" value={formData.color} onChange={handleChange} required>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="purple">Purple</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="orange">Orange</option>
+                        <option value="pink">Pink</option>
+                        <option value="rainbow">Rainbow</option>
+                    </select>
                 </label>
                 <br />
-                <button type="submit">Submit</button>
+                <button type="submit" className="submit-button">Submit</button>
             </form>
         </div>
     );
