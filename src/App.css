@@ -66,25 +66,7 @@
   color: beige;
 }
 
-.home-container {
-  width: 100%;
-  text-align: center;
-  color: white;
-}
-
-.create-container {
-  width: 100%;
-  text-align: center;
-  color: white;
-}
-
-.gallery-container {
-  width: 100%;
-  text-align: center;
-  color: white;
-}
-
-.edit-container {
+.right-container {
   width: 100%;
   text-align: center;
   color: white;
@@ -93,6 +75,8 @@
 .crewmate-card {
   padding-bottom: 1rem;
   border: 1px solid gray;
+  width: 50%;
+  margin: auto;
 }
 
 .button-group {

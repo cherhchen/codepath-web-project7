@@ -27,7 +27,7 @@ const CreateCrewmate = () => {
     };
 
     return (
-        <div className="create-container">
+        <div className="right-container">
             <h1>Create Crewmate</h1>
             <form onSubmit={handleSubmit}>
                 <label>

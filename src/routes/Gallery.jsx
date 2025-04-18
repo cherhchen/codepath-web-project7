@@ -21,7 +21,7 @@ const Gallery = () => {
     , []);
 
     return (
-        <div className="gallery-container">
+        <div className="right-container">
             <h1>Crewmate Gallery</h1>
             {crewmates.map((crewmate) =>
                 <Crewmate key={crewmate.id} crewmate={crewmate} />

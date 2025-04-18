@@ -64,7 +64,7 @@ const EditCrewmate = () => {
     }, [id])
 
     return (
-        <div className="edit-container">
+        <div className="right-container">
             <h1>Update Your Crewmate</h1>
             <form onSubmit={handleUpdate}>
                 <label>
